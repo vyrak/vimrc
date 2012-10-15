@@ -11,6 +11,9 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'surround.vim'
+Bundle 'repeat.vim'
+Bundle 'matchit.zip'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
