@@ -17,7 +17,9 @@ Bundle 'matchit.zip'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
-colorscheme solarized
+if has("gui")
+  colorscheme solarized
+endif
 
 " 'NERDtree' vundle required
 nmap ,n :NERDTreeToggle<CR>
@@ -114,6 +116,7 @@ set matchtime=5
 
 set list
 set listchars=tab:>·,trail:·,extends:#,nbsp:·
+
 " No blinking
 set novisualbell
 
