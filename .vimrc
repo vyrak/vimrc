@@ -31,6 +31,9 @@ filetype plugin indent on
 syntax on
 let mapleader=","
 
+" Source rc
+map <Leader>s :source $MYVIMRC<CR>
+
 " Swap file directory
 set directory=$TMP
 
@@ -63,6 +66,9 @@ map <A-h> <C-w><
 " Keeps selection when changing indentation
 vnoremap < <gv
 vnoremap > >gv
+
+" Keeps content of initial paste
+vnoremap p p:let @*=@0<CR>
 
 map <F1> <Nop>
 
@@ -115,7 +121,7 @@ set showmatch
 set matchtime=5
 
 set list
-set listchars=tab:>·,trail:·,extends:#,nbsp:·
+set listchars=tab:·>,trail:·,extends:#,nbsp:·
 
 " No blinking
 set novisualbell
