@@ -1,4 +1,4 @@
-" Don't want vi compatibility.  Necesary for lots of cool vim things
+" Don't want vi compatibility.  Necessary for lots of cool vim things
 set nocompatible
 
 " vundle bootstrap
@@ -14,6 +14,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'surround.vim'
 Bundle 'repeat.vim'
 Bundle 'matchit.zip'
+Bundle 'quickfonts.vim'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
@@ -68,7 +69,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Keeps content of initial paste
-vnoremap p p:let @*=@0<CR>
+vnoremap p "_dP
 
 map <F1> <Nop>
 
@@ -141,8 +142,8 @@ if has("gui_running")
   set guioptions -=m
   set guioptions -=T
   set guioptions -=r
-  set guifont=Anonymous_Pro:h11
+  set guifont=Anonymous_Pro:h14
 
   " Maximaize window
-  au guienter * simalt ~x
+  " autocmd guienter * simalt ~x
 endif
