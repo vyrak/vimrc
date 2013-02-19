@@ -15,6 +15,10 @@ Bundle 'surround.vim'
 Bundle 'repeat.vim'
 Bundle 'matchit.zip'
 Bundle 'quickfonts.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'juvenn/mustache.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'groenewege/vim-less'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
@@ -136,7 +140,7 @@ set laststatus=0
 set selection=exclusive
 
 " Change directory into path of the file
-autocmd bufenter * silent! lcd %:p:h
+" autocmd bufenter * silent! lcd %:p:h
 
 if has("gui_running")
   set guioptions -=m
@@ -147,3 +151,10 @@ if has("gui_running")
   " Maximaize window
   " autocmd guienter * simalt ~x
 endif
+
+set wildignore +=*/.git/*
+set wildignore +=*.ipc
+set wildignore +=*.swp
+
+let g:ctrlp_custom_ignore = 'vendor\/'
+
