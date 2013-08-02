@@ -19,6 +19,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'mileszs/ack.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'scrooloose/syntastic'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
@@ -78,6 +81,9 @@ vnoremap p "_dP
 map <F1> <Nop>
 
 syntax enable
+
+" Mac clipboard
+set clipboard=unnamed
 
 " Enable error files & error jumping.
 set cf
@@ -142,6 +148,8 @@ set selection=exclusive
 " Change directory into path of the file
 " autocmd bufenter * silent! lcd %:p:h
 
+autocmd bufenter *.slim silent! set filetype=slim
+
 if has("gui_running")
   set guioptions -=m
   set guioptions -=T
@@ -157,4 +165,3 @@ set wildignore +=*.ipc
 set wildignore +=*.swp
 
 let g:ctrlp_custom_ignore = 'vendor\/'
-
