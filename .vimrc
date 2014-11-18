@@ -22,6 +22,9 @@ Bundle 'groenewege/vim-less'
 Bundle 'mileszs/ack.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'scrooloose/syntastic'
+"Bundle 'pangloss/vim-javascript' autoindent no work
+"Bundle 'mxw/vim-jsx'
+Bundle 'jsx/jsx.vim'
 
 " 'altercation/vim-colors-solarized' vundle required
 set background=dark
@@ -164,4 +167,7 @@ set wildignore +=*/.git/*
 set wildignore +=*.ipc
 set wildignore +=*.swp
 
-let g:ctrlp_custom_ignore = 'vendor\/'
+let g:ctrlp_working_path_mode = 'w'
+let g:ctrlp_custom_ignore = '\v(vendor|node_modules|bower_components)\/'
+
+let g:syntastic_javascript_checkers = ['jsxhint']
